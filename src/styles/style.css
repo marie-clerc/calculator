@@ -16,9 +16,9 @@ body {
     --white: #fff;
     --light-white: #eee;
 
-    --tomato: #d40640;
-    --purple-transparent: rgba(88, 24, 69, .9);
-    --pink-transparent : rgba(216, 14, 91, .9);
+    --flashgreen: #06d440;
+    --darkgreen-transparent: rgba(24, 88, 47, 0.9);
+    --vertmarin-transparent : rgba(14, 216, 152, 0.9);
 
     --orange: #ff3c00;
 
@@ -30,7 +30,7 @@ body {
 .app {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to bottom right, var(--pink-transparent), var(--purple-transparent)), url(https://i.pinimg.com/originals/91/b5/cd/91b5cdab51e207263169904b227503b4.jpg);
+    background-image: linear-gradient(to bottom right, var(--vertmarin-transparent), var(--darkgreen-transparent)), url(https://i.pinimg.com/originals/91/b5/cd/91b5cdab51e207263169904b227503b4.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -67,9 +67,8 @@ body {
     width: 100%;
     padding: 0 2rem;
     overflow: hidden;
-    white-space: no-wrap;
     color: var(--light-white);
-    background-color: var(--tomato);
+    background-color: var(--flashgreen);
 }
 
 .keypad__row {
@@ -99,7 +98,7 @@ body {
 }
 .btn:hover {
     color: var(--light-white);
-    background-color: var(--tomato);
+    background-color: var(--flashgreen);
 }
 .btn:active {
     transform: scale(.95);
@@ -120,7 +119,7 @@ body {
 
 .btn-equal:hover {
     color: var(--light-white);
-    background-color: var(--tomato);
+    background-color: var(--flashgreen);
 }
 .btn-equal:active {
     transform: scale(.95);
