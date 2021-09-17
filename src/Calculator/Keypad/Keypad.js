@@ -3,41 +3,42 @@ import KeypadRow from './KeypadRow/KeypadRow';
 import AmazingNumberButton from '../AmazingNumberButton/AmazingNumberButton';
 import GreatOperationButton from '../GreatOperationButton/GreatOperationButton';
 import MagnificentEqualButton from '../MagnificientEqualButton/MagnificientEqualButton';
-const keypad = () => (
+
+const keypad = (props) => (
     <section className="keypad">
 
             <KeypadRow>
-                <GreatOperationButton>C</GreatOperationButton>
-                <GreatOperationButton>&larr;</GreatOperationButton>
-                <AmazingNumberButton>%</AmazingNumberButton>
-                <GreatOperationButton>/</GreatOperationButton>
+                <GreatOperationButton type="primary" onButtonPress={props.onButtonPress}>C</GreatOperationButton>
+                <GreatOperationButton type="primary" onButtonPress={props.onButtonPress}>DEL</GreatOperationButton>
+                <GreatOperationButton type="operator" onButtonPress={props.onButtonPress}>%</GreatOperationButton>
+                <GreatOperationButton type="operator" onButtonPress={props.onButtonPress}>/</GreatOperationButton>
             </KeypadRow>
 
             <KeypadRow>
-                <AmazingNumberButton>9</AmazingNumberButton>
-                <AmazingNumberButton>8</AmazingNumberButton>
-                <AmazingNumberButton>7</AmazingNumberButton>
-                <GreatOperationButton>*</GreatOperationButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>9</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>8</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>7</AmazingNumberButton>
+                <GreatOperationButton type="operator" onButtonPress={props.onButtonPress}>*</GreatOperationButton>
             </KeypadRow>
 
             <KeypadRow>
-                <AmazingNumberButton>6</AmazingNumberButton>
-                <AmazingNumberButton>5</AmazingNumberButton>
-                <AmazingNumberButton>4</AmazingNumberButton>
-                <GreatOperationButton>-</GreatOperationButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>6</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>5</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>4</AmazingNumberButton>
+                <GreatOperationButton type="operator" onButtonPress={props.onButtonPress}>-</GreatOperationButton>
             </KeypadRow>
 
             <KeypadRow>
-                <AmazingNumberButton>3</AmazingNumberButton>
-                <AmazingNumberButton>2</AmazingNumberButton>
-                <AmazingNumberButton>1</AmazingNumberButton>
-                <GreatOperationButton>+</GreatOperationButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>3</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>2</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>1</AmazingNumberButton>
+                <GreatOperationButton type="operator" onButtonPress={props.onButtonPress}>+</GreatOperationButton>
             </KeypadRow>
 
             <KeypadRow>
-                <AmazingNumberButton>0</AmazingNumberButton>
-                <AmazingNumberButton>.</AmazingNumberButton>
-                <MagnificentEqualButton>=</MagnificentEqualButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>0</AmazingNumberButton>
+                <AmazingNumberButton onButtonPress={props.onButtonPress}>.</AmazingNumberButton>
+                <MagnificentEqualButton onButtonPress={props.onButtonPress}>=</MagnificentEqualButton>
             </KeypadRow>
 
     </section>

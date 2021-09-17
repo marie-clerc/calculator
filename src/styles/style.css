@@ -20,7 +20,7 @@ body {
     --darkgreen-transparent: rgba(24, 88, 47, 0.9);
     --vertmarin-transparent : rgba(14, 216, 152, 0.9);
 
-    --orange: #ff3c00;
+    --light-green: #88ff00;
 
     --light-black: #222;
     --black: #000;
@@ -104,8 +104,7 @@ body {
     transform: scale(.95);
 }
 .btn-equal {
-    width: 50%;
-    height: 100%;
+    width: 50% !important;
     font-size: 3rem;
     font-family: inherit;
     background-color: var(--white);
@@ -123,4 +122,11 @@ body {
 }
 .btn-equal:active {
     transform: scale(.95);
+}
+
+.btn--primary {
+    color: var(--flashgreen);
+}
+.btn--operator {
+    color: var(--light-green);
 }

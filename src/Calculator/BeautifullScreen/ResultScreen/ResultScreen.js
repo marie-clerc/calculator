@@ -1,7 +1,7 @@
 import React from 'react';
-const resultScreen = () => (
+const resultScreen = (props) => (
     <div className="result-screen">
-        3124
+        {props.children}
     </div>
 );
 export default resultScreen;
