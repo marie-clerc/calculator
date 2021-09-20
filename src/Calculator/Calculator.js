@@ -1,6 +1,9 @@
 import React from 'react';
 import BeautifullScreen from './BeautifullScreen/BeautifullScreen';
 import Keypad from './Keypad/Keypad';
+import ItSOverNineThousand from "../ItSOverNineThousand/ItSOverNineThousand";
+
+
 
 class Calculator extends React.Component {
     state = {
@@ -20,12 +23,19 @@ class Calculator extends React.Component {
         else if (ops.includes(pressedButton) && ops.includes(equation.slice(-1))) equation += ''; // n'affiche pas 2 opérateurs à la suite, CA MARCHE PAS
         else if (pressedButton === '=') {
             try {
-                const evalResult = eval(equation);
+                const evalResult = eval(equation); //resultat
                 const result = Number.isInteger(evalResult)? evalResult : evalResult.toFixed(2); //2 chiffres après la virgule
                 this.setState({result});
                 equation = equation.trim();
+                if (result > 9000){
+                    return (
+                        <div className="Nine">
+                            <ItSOverNineThousand text="It's over 9000 !!!" />
+                        </div>
+                    );
+                }
             } catch (error) {
-                alert('Equation Invalid');
+                alert('Equation Invalide');
             }
         }
         else { //button DEL
